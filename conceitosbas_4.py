@@ -1,10 +1,9 @@
+#
 #============================================================================
-# Nome        : calcArea.py
 # Autor       : clayton j a silva
-# Versão      : 0
-# Copyright   : clayton j a silva
-# Descrição   : Calcula área de um triângulo
-#============================================================================
+# Descrição   : exemplo tipos, operadores, entrada/saída 
+# ============================================================================
+#
 
 print("Este programa determina a area de um triangulo") #Comando de saída - print()
 
