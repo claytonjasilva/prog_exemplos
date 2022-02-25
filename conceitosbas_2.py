@@ -1,14 +1,12 @@
 #
 #============================================================================
 # Autor       : clayton j a silva
-# Versão      : 0
-# Copyright   : clayton j a silva
-# Descrição   : Terceiro programa para treinamento em Python 
+# Descrição   : exemplo tipos, operadores, entrada/saída 
 # ============================================================================
 #
 
-# Implementa operações artiméticas com variáveis
-# operadores + adição
+# O programa implementa operações artiméticas com variáveis, usando operadores
+# + adição
 # - subtração
 # * multiplicação
 # / divisão
