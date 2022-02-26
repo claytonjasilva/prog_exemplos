@@ -1,10 +1,9 @@
+#
 #============================================================================
-# Nome        : testaString.py
 # Autor       : clayton j a silva
-# Versão      : 0
-# Copyright   : clayton j a silva
-# Descrição   : Realiza testes em uma frase
-#============================================================================
+# Descrição   : exemplo condicionais 
+# ============================================================================
+#
 
 print("O programa calcula as raizes de um polinomio do segundo grau na forma a.x2+b.x+c")
 
