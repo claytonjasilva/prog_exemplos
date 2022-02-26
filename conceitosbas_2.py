@@ -20,6 +20,7 @@ b = 5 #variável do tipo inteiro
 h = 3.5 #variável do tipo ponto flutuante - ponto decimal
 area = b * h/2 #expressão aritmética - atenção para a precedência entre os operadores
 print(area)
+#Experimente substitutir print(area) por print(round(area,1))
 
 # calculando a area de um quadrado
 # lado(l) elevado ao quadrado
