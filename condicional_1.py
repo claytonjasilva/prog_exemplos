@@ -1,10 +1,9 @@
+#
 #============================================================================
-# Nome        : testaString.py
 # Autor       : clayton j a silva
-# Versão      : 0
-# Copyright   : clayton j a silva
-# Descrição   : Realiza testes em uma frase
-#============================================================================
+# Descrição   : exemplo condicionais 
+# ============================================================================
+#
 
 frase = input("Digite a frase: ")
 tamanho = len(frase) #a função len(<string>) retorna o tamanho da string
