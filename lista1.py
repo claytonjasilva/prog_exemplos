@@ -1,6 +1,9 @@
-#O programa ilustra a utilizacao de listas 
-#Elaborado por Clayton J A Silva
-#Em 9fev2022
+#
+#============================================================================
+# Autor       : clayton j a silva
+# Descrição   : exemplo tipos, operadores, entrada/saída 
+# ============================================================================
+#
 
 print("O programa le as notas de um grupo de N alunos...")
 print("determina a maior das notas e apresenta a porcentagem de cada nota em relacao a maior")
