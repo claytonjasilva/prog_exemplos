@@ -17,18 +17,18 @@ print("O IMC da pessoa é ",round(imc,1))
 
 # Testa a categoria - ref.<https://escolaeducacao.com.br/wp-content/uploads/2020/04/tabela-imc.jpg>
 if (imc<16):
-    print("Baixo peso grau I")
+    print("\aBaixo peso grau I")
 elif (imc<17):
-    print("Baixo peso grau II")
+    print("\aBaixo peso grau II")
 elif (imc<18.5):
-    print("Baixo peso grau III")
+    print("\aBaixo peso grau III")
 elif (imc<25):
     print("Peso ADEQUADO")
 elif (imc<30):
-    print("Sobrepeso")
+    print("\aSobrepeso")
 elif (imc<35):
-    print("Obesidade grau I")
+    print("\aObesidade grau I")
 elif (imc<40):
-    print("Obesidade grau II")
+    print("\aObesidade grau II")
 else:
-    print("Obesidade grau III")
+    print("\aObesidade grau III")
