@@ -6,7 +6,7 @@
 # 19mar2022
 
 # Leitura dos dados de entrada e atribuição às variáveis do tipo ponto flutuante
-peso=float(input("Digite o peso da pessoa: \n")) # O caractere especial '\n' quebra linha
+peso=float(input("Digite o peso da pessoa: \n")) # Barra invertida - A sequência de escape '\n' quebra linha
 altura=float(input("Digite a sua altura: \n"))
 
 # Calcula o imc
