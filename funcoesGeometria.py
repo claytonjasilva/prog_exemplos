@@ -5,33 +5,33 @@
 import math
 
 
-def quad(l):  # função que retorna a área do quadrado
-    area = l * l
-    return area
+def quad(l):                                                                                                 # define a função quad ... usa parâmetro l
+    a = l * l                                                                                                # a é uma variável local
+    return a                                                                                                 # a função quad retorna o valor armazenado em a
 
 
-def ret(b, a):  # função que retonra a área do retângulo
-    area = b * a / 2
-    return area
+def ret(b, a):                                                                                               # define a função ret ... usa parâmetros b e a
+    ar = b * a / 2                                                                                           # ar é uma variável local
+    return ar                                                                                                # ar função ret retorna o valor armazenado em ar
 
 
-def circ(r):  # função que retonra a área do círculo
-    area = math.pi * r ** 2
-    return area
+def circ(r):                                                                                                 # define a função circ ... usa parâmetro r
+    a = math.pi * r ** 2                                                                                     # a é uma variável local
+    return a                                                                                                 # a função circ retorna o valor armazenado em a
 
 
 # Início do corpo do código
-N = int(input('Digite o número de figuras: '))
-for i in range(N):
-    tipo = input('Digite o tipo de figura: q-quadrado, r-retângulo ou c-círculo ')
+N = int(input('Digite o número de figuras: '))                                                                 # N é uma variável global
+for i in range(N):                                                                                             # i é uma variável global
+    tipo = input('Digite o tipo de figura: q-quadrado, r-retângulo ou c-círculo ')                             # tipo é uma variável global
     if tipo == 'q':
-        lado = float(input('Digite lado: '))
-        area = quad(lado)
+        lado = float(input('Digite lado: '))                                     # lado é uma variável global ... armazena o argumento passado para a função quad
+        area = quad(lado)                                                                                      # area é uma variável global
     elif tipo == 'r':
-        base = float(input('Digite a base: '))
+        base = float(input('Digite a base: '))                                                                 # base e altura são variáveis globais
         altura = float(input('Digite a altura: '))
-        area = ret(base, altura)
-    elif tipo == 'c':
-        raio = float(input('Digite o raio: '))
-        area = circ(raio)
+        area = ret(base, altura)                                                 # base e altura armazenam argumentos passados para a função ret
+    elif tipo == 'c': 
+        raio = float(input('Digite o raio: '))                                                                 # raio é uma variável global
+        area = circ(raio)                                                        # raio armazena o argumento passado para a função circ
     print(area)
