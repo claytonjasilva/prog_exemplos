@@ -7,17 +7,17 @@ import math
 
 def quad(l):                                                                                                 # define a função quad ... usa parâmetro l
     a = l * l                                                                                                # a é uma variável local
-    return a                                                                                                 # a função retorna o valor armazenado em a
+    return a                                                                                                 # a função quad retorna o valor armazenado em a
 
 
 def ret(b, a):                                                                                               # define a função ret ... usa parâmetros b e a
     ar = b * a / 2                                                                                           # ar é uma variável local
-    return ar                                                                                                # ar função quad retorna o valor armazenado em a
+    return ar                                                                                                # ar função ret retorna o valor armazenado em ar
 
 
 def circ(r):                                                                                                 # define a função circ ... usa parâmetro r
     a = math.pi * r ** 2                                                                                     # a é uma variável local
-    return a
+    return a                                                                                                 # a função circ retorna o valor armazenado em a
 
 
 # Início do corpo do código
