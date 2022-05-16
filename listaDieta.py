@@ -24,7 +24,7 @@ nome = []  # Inicializa as listas
 idade = []
 peso = []
 altura = []
-dieta = []
+programa = []
 imc = []
 
 for i in range(N):
@@ -32,8 +32,8 @@ for i in range(N):
     idade.append(int(input('Digite a idade da pessoa: ')))
     peso.append(float(input('Digite o peso da pessoa: ')))
     altura.append(float(input('Digite a altura da pessoa: ')))
-    dieta.append(exercicio(idade[i]))
-    print('O programa de exercícios da pessoa é ', dieta[i])
+    programa.append(exercicio(idade[i]))
+    print('O programa de exercícios da pessoa é ', programa[i])
     imc.append(indice(peso[i], altura[i]))
     if imc[i] < 19:
         print('dieta gorda')
@@ -42,4 +42,4 @@ for i in range(N):
 
 print('nome   idade    programa      imc')
 for i in range(N):
-    print(nome[i], ' ', idade[i], ' ', dieta[i], ' ', round(imc[i], 1))
+    print(nome[i], ' ', idade[i], ' ', programa[i], ' ', round(imc[i], 1))
