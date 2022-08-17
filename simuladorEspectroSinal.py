@@ -17,10 +17,9 @@ for i in range(len(y)):  # Gera lista dos valores do sinal em float
 Ta = float(s)  # Recupera o período de amostragem
 x = np.array(x)
 t = np.array([i * Ta for i in range(len(x))])  # Define a janela temporal
-Xf = np.fft.fft(x)  # Calcula a Transformada de Fourier
-f = np.fft.fftfreq(x.size)  # Define as frequências
+Xf = np.absolute(np.fft.fft(x))  # Calcula a Transformada de Fourier
+f = np.fft.fftfreq(len(Xf),Ta)  # Define as frequências
 plt.plot(t, x)
 plt.show()
 plt.plot(f, Xf)
 plt.show()
-
