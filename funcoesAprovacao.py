@@ -21,7 +21,7 @@ def porc(f, tot):
 
 
 #  Inicio do corpo do código
-N = 3  # Número total de alunos
+N = 30  # Número total de alunos
 aula = int(input('Digite o número de aulas da disciplina: '))
 for i in range(N):
     #  Leitura dos dados sem AS
