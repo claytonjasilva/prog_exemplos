@@ -5,7 +5,7 @@
 // =======================================================================================
 
 // Declaração e inicialização de variáveis globais de entrada In1,In0
-int In0=0, In1=1;
+int In0=2, In1=3;
 // Declaração e inicialização de variáveis globais de saída Out4,Out3,Out2,Out1,Out0
 int Out0=8, Out1=9, Out2=10, Out3=11, Out4=12;
 
