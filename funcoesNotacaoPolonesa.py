@@ -43,13 +43,21 @@ elif operacao == 'cdif':
 elif operacao == 'csoma':
     resultado = csoma(num1, num2)
 print(resultado)
-num = float(input('Digite o novo número: '))
-operacao = input('Digite a nova operação desejada (nop para encerrar) : sq - sc - qdif - qsoma - cdif - csoma: ')
-while operacao != 'nop':
-    resultado += resultado
+aux = input("Digite o novo número ou 'nop' : ")
+while aux != 'nop':
+    num = float(aux)
+    operacao = input('Digite a nova operação desejada: sq - sc - qdif - qsoma - cdif - csoma: ')
+    if operacao == 'sq':
+        resultado = sq(resultado, num2)
+    elif operacao == 'sc':
+        resultado = sc(resultado, num2)
+    elif operacao == 'qdif':
+        resultado = qdif(resultado, num2)
+    elif operacao == 'qsoma':
+        resultado = qsoma(resultado, num2)
+    elif operacao == 'cdif':
+        resultado = cdif(resultado, num2)
+    elif operacao == 'csoma':
+        resultado = csoma(resultado, num2)
     print(resultado)
-    num = float(input('Digite o novo número: '))
-    operacao = input('Digite a nova operação desejada (nop para encerrar) : sq - sc - qdif - qsoma - cdif - csoma: ')
-
-
-
+    aux = input("Digite o novo número ou 'nop' : ")
