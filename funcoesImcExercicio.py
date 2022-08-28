@@ -3,7 +3,7 @@
 # Recomenda programa de exercícios
 # Recomenda dieta
 
-def dieta(i):  # Determina o programa de exercícios em função da idade 'i'
+def programa(i):  # Determina o programa de exercícios em função da idade 'i'
     if i < 15:
         return 'D'
     elif i <= 40:
@@ -23,9 +23,10 @@ nome = input('Digite o nome da pessoa: ')
 idade = int(input('Digite a idade da pessoa: '))
 peso = float(input('Digite o peso da pessoa: '))
 altura = float(input('Digite a altura da pessoa: '))
-print('O programa de exercícios da pessoa é ', dieta(idade))
+
+print('O programa de exercícios da pessoa é ', programa(idade))
 indice = imc(peso, altura)
 if indice < 19:
     print('dieta gorda')
-if indice > 25:
+elif indice > 25:
     print('dieta magra')
