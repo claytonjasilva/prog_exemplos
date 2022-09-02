@@ -5,30 +5,35 @@
 # (ii) determinar a soma da série {1/N,2/N-1, ..., N/1}.
 # O programa deverá escrever todos os números superiores ao primeiro número lido.
 # Deverá escrever também todos os números inferiores ao último número lido antes do 0.
+# Atualizado em agosto de 2022
+# Prof Clayton J A Silva
 
 
 def serie1(num):
     soma = 0
-    for i in range(num + 1):
+    for i in range(num):
         soma += i
+    soma += num
     return soma
 
 
 def serie2(num):
     soma = 0
-    for i in range(1, num + 1):
-        soma += 1 / (num - i + 1)
+    for i in range(1, num):
+        soma += i / (num-i+1)
+    soma += num
     return soma
 
 
 # Corpo do código
 numero = []
 dado = int(input('Digite o número: '))
-while dado != 0:  # Cadastra todos os números válidos e calcula as séries
+while dado != 0:  # Cadastra todos os números da sequência e calcula as séries
     numero.append(dado)
     print(serie1(dado))
     print(serie2(dado))
     dado = int(input('Digite o número: '))
+
 # Escreve os números superiores ao primeiro número lido e inferiores ao último
 print('superiores')
 for i in range(len(numero)):
