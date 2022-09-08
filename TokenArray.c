@@ -2,7 +2,7 @@
  ============================================================================
  Nome      : TokenArray.c
  Autor     : Prof Clayton J A Silva - Compiladores princípios e práticas, Louden K
- Descrição : Implementa DFA identificador com variável de estado e testes
+ Descrição : Cria registro de token
  ============================================================================
  */
 
