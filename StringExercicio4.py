@@ -1,7 +1,8 @@
-#4. Elaborar um script em Python que leia o nome completo de uma pessoa 
-#e escreva o endereço de e-mail formado da seguinte maneira: 
-#primeiro nome + ponto + funcao + arroba + ‘empresa.com.br’. 
-#O endereço de e-mail deve ser formado por letras minúsculas.
+# 4. Elaborar um script em Python que leia o nome completo de uma pessoa 
+# e escreva o endereço de e-mail formado da seguinte maneira: 
+# primeiro nome + ponto + funcao + arroba + ‘empresa.com.br’. 
+# O endereço de e-mail deve ser formado por letras minúsculas.
+# Atualizaado em 3/10/22
 
 nome = input('Digite o nome: ')
 funcao = input('Digite a funcao: ')
