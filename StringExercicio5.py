@@ -1,6 +1,7 @@
-#5. Elaborar um script em Python que leia uma relação de nomes de alunos 
-#Após cadastrar a relação o usuário poderá digitar uma letra e o 
-#programa retornará todos os nomes iniciados com a letra digitada.
+# 5. Elaborar um script em Python que leia uma relação de nomes de alunos 
+# Após cadastrar a relação o usuário poderá digitar uma letra e o 
+# programa retornará todos os nomes iniciados com a letra digitada.
+# Atualizado em 3/10/22
 
 N = int(input('Digite o tamanho da relação: '))
 nome = []
