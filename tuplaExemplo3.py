@@ -8,13 +8,6 @@
 # Leitura do número de alunos da turma
 N = int(input('Digite quantos alunos: '))
 
-# Inicialização das listas
-matricula = []
-ap1 = []
-ap2 = []
-ac = []
-media = []
-
 # Leitura dos dados
 print('Leitura de matriculas')
 matricula = [input('Digite a matricula: ') for i in range(N)]
