@@ -1,18 +1,15 @@
-# Elaborar um programa em Python que leia e armazene o cpf e o saldo bancário
-# de um grupo de 10 pessoas ao longo de 30 dias.
-# O programa deverá escrever o cpf das pessoas seguido do saldo médio mensal.
+# Elaborar um programa em Python que leia e armazene o cpf de um grupo de 10 pessoas em uma tupla.
+# Leia e armazene o saldo bancário médio ao longo dos últimos 30 dias em uma lista. 
+# O programa deverá criar uma lista dos cpf cujas pessoas apresentaram um saldo médio superior 
+# à média de saldo do grupo.
+# Atualizado em 14/10/22
 
-c = []
-for i in range(3):
-    c.append(input('cpf: '))
-cpf = tuple(c)
+N = 3
+cpf = tuple([input('cpf: ') for i in range(N)])
 saldo = []
-dados = (cpf, saldo)
-saldo_medio = []
-for i in range(3):
-    saldo.append([])
-    for j in range(3):
-        saldo[i].append(float(input('Digite saldo: ')))
-for i in range(3):
-    saldo_medio.append(sum(saldo[i])/3)
-print(dados,saldo_medio)
+for i in range(N):
+    print('cpf ', cpf[i])
+    saldo.append(float(input('Digite saldo: ')))
+media = sum(saldo) / N
+lista_cpf = [cpf[i] for i in range(N) if saldo[i] > media]
+print(lista_cpf)
