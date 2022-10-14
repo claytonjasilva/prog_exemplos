@@ -3,6 +3,7 @@
 # adastrando-as em uma lista. O programa deverá determinar a média parcial (MP) de cada aluno,
 # considerando que MP = 0,4(AP1+AP2) + 0,2 AC.
 # Deverá cadastrar em uma tupla as matriculas, as notas e a média parcial de todos os alunos.
+# Atualizado em 14/10/22
 
 # Leitura do número de alunos da turma
 N = int(input('Digite quantos alunos: '))
