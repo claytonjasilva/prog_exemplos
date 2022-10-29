@@ -16,6 +16,4 @@ entrada = input('Digite a matricula a ser pesquisada: ')
 if entrada not in aluno.keys():
     print('Aluno inexistente')
 else:
-    for chave in aluno.keys():
-        if entrada == chave:
-            print(aluno[chave])
+    print(aluno[entrada])
