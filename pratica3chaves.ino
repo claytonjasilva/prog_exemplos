@@ -12,6 +12,7 @@ void setup(){
    pinMode(I0,INPUT);
    pinMode(I1,INPUT);
    pinMode(I2,INPUT);
+   Serial.begin(9600);
 }
 
 void loop(){
@@ -20,4 +21,6 @@ void loop(){
    b = digitalRead(I1);
    c = digitalRead(I2);
    saida = converteDecimal(a,b,c);
+   Serial.println(decimal,DEC);
+   delay(3000);
 }
