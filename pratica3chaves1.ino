@@ -35,7 +35,7 @@ void loop(){
    if (a==1)
       saida = soma(a+2*b+4*c); // Entrada decimal impar chama funcao soma da combinacao da entrada
    else 
-      saida = produto(a+2*b+4*c); // Entrada decimal par chama funcao produto da co,binacao da entrada
+      saida = produto(a+2*b+4*c); // Entrada decimal par chama funcao produto da combinacao da entrada
    Serial.println(saida,DEC);
    delay(3000);
 }
