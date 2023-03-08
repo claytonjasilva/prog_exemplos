@@ -9,7 +9,7 @@
  */
 
 #include <stdio.h>
-#define PI 3.1415
+#define PI 3.1415 // Define a macro PI
 
 main() {
 	float raio=2.1, area; // Declara variáveis de ponto flutuante
