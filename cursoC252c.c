@@ -9,7 +9,6 @@
  */
 
 #include <stdio.h>
-#include <conio.h> // Inclui funcoes de leitura/escrita de caracteres
 
 main() {
 	char meu_nome[20]="clayton j a silva"; // Declara e inicializa a string
