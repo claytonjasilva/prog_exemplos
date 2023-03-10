@@ -9,7 +9,7 @@ float disparaTrig(){  // A função diapara um sinal de trigger no pino pinTrig 
   digitalWrite(pinTrig,HIGH);
   delayMicroseconds(10);
   digitalWrite(pinTrig,LOW);
-  return pulseIn(pinEcho,HIGH)*0.000001;  // determina o tempo em seg
+  return pulseIn(pinEcho,HIGH);  // determina o tempo em microssegundos
 }
 
 void setup() {
@@ -29,8 +29,8 @@ void loop() {
     // leitura do byte de entrada:
     comando = Serial.read();
     if (comando == 'A'){
-      tempo = disparaTrig(); // dispara sinal de Trig E retorna a duracao do pulso que indica a distancia
-      distancia=tempo*VEL_SOM*100/2; // determina a distancia em cm     
+      tempo = disparaTrig(); // dispara sinal de Trig E retorna a duracao do pulso (em microssegundos) que indica a distancia
+      distancia=tempo*0.000001*VEL_SOM*100/2; // determina a distancia em cm     
       Serial.println("Distancia em centimetros: "); // apresenta o resultado
       Serial.println(distancia,DEC);  
     }
