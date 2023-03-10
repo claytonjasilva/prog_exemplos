@@ -1,25 +1,21 @@
 //Este código captura e armazena as distâncias detectadas por um sensor ultrassônico
+#define VEL_SOM 340 // definição da velocidade do som, em metros por seg
 
-// definição das variáveis globais
+// declaração das variáveis globais
 int pinEcho=6; // pino do Arduíno ligado ao pino Echo do sensor
 int pinTrig=7; // pino do Arduíno ligado ao pino Trig do sensor
-float *vetor; // ponteiro que irá armazenar os 1000 primeiros dados das distâncias
-int *p_cont;  // ponteiro do contador
 
-const int VEL_SOM=340; // definição da constante em metros por seg
-
-void disparaTrig(){
+float disparaTrig(){  // A função diapara um sinal de trigger no pino pinTrig com largura de 10 microssegundos
   digitalWrite(pinTrig,HIGH);
   delayMicroseconds(10);
   digitalWrite(pinTrig,LOW);
+  return pulseIn(pinEcho,HIGH)*0.000001;  // determina o tempo em seg
 }
 
 void setup() {
   pinMode(pinEcho,INPUT);  // define os pinos do Arduíno
-  pinMode(pinTrig,OUTPUT);
-  vetor=0x200; // inicializa o endereço em 0x200 - endereço inicial da SRAM do MC2560
-  p_cont=0x1394; // endereço para o contador a fim de não haver conflito com vetor
-
+                           // Observe que o pino Echo de saída do módulo ultrassônico se conecta com o pino pinEcho de entrada do Arduíno   
+  pinMode(pinTrig,OUTPUT); // Analogamente, o pino Trig de entrada do módulo ultrassônico se conecta com o pino pinTrig de saída do Arduíno
   // inicializa o pino de Trig e a porta serial
   digitalWrite(pinTrig,LOW);
   Serial.begin(9600);
@@ -27,17 +23,17 @@ void setup() {
 }
 
 void loop() {
-
-  if (*p_cont<=1000){
-    disparaTrig(); // dispara sinal de Trig
-    *vetor=pulseIn(pinEcho,HIGH)*0.000001; // determina o tempo em seg
-    *vetor=*vetor*VEL_SOM*100/2; // determina a distancia em cm     
-    Serial.println("Distancia em centimetros: "); // apresenta o resultado
-    Serial.println(*vetor);  
+  int comando;
+  float tempo, distancia;
+  if (Serial.available() > 0) { // Verifica se há sinal disponível na serial
+    // leitura do byte de entrada:
+    comando = Serial.read();
+    if (comando == 'A'){
+      tempo = disparaTrig(); // dispara sinal de Trig E retorna a duracao do pulso que indica a distancia
+      distancia=tempo*VEL_SOM*100/2; // determina a distancia em cm     
+      Serial.println("Distancia em centimetros: "); // apresenta o resultado
+      Serial.println(distancia,DEC);  
+    }
   }
-  *p_cont++;
-  vetor++; //incrementa o ponteiro
-  
   delay(2000); //mantém ciclo de 2 seg de trabalho do sensor
-  
 }
