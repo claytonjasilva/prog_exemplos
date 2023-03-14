@@ -11,11 +11,12 @@
 #include <stdio.h>
 
 main() {
-	char ch1, ch2, ch3, ch4, ch5; // Declara variáveis de ponto flutuante
-	scanf("%c %c %c %c %c",&ch1, &ch2, &ch3, &ch4, &ch5);
-	putchar(ch1);
-	putchar(ch2);
-	putchar(ch3);
-	putchar(ch4);
-	putchar(ch5);
+	char ch='a'; // Declara e inicializa variavel do tipo char
+	int contador=1; // Declara e inicializa variavel do tipo inteiro
+	while (ch<='z'){ // Observe a estrutura de repeticao while
+		printf("O %io caractere eh %c\n",contador,ch);
+		ch++; // Como os caracteres possuem uma representacao decimal, aceitam incremento em C
+		contador++; // O contador tambem incrementa para indicar a ordem da letra
+	}
+	
 }
