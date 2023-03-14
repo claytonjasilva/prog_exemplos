@@ -9,7 +9,7 @@
  */
 
 #include <stdio.h>
-#include <math.h>
+#include <math.h> // Uso da biblioteca math.h
 
 main() {
 	float a, b, c; // Declara variáveis de ponto flutuante
@@ -18,8 +18,24 @@ main() {
 	scanf("%f %f %f",&a,&b,&c);
 	delta = b * b - 4 * a * c;
 	printf("delta e %f\n",delta);
-	x1 = (- b + sqrt(delta))/(2 * a);
-	x2 = (- b - sqrt(delta))/(2 * a);
-	printf("A raiz x1 e %4.2f\n",x1); // Formato printf(<cadeia de caracteres de controle>,<lista de argumentos>);
-	printf("A raiz x2 e %4.2f\n",x2); // Especifica o tamanho do campo e a precisão
+	// Uso da condicional if
+	// Atencao aos blocos de instrucoes delimitados por { }
+	if (delta>0) { // Raízes diferentes e reais
+		printf("Raizes diferentes e reais!\n"); // A endentacao nao tem significado sintatico
+		x1 = (- b + sqrt(delta))/(2 * a); 
+		x2 = (- b - sqrt(delta))/(2 * a);
+		printf("A raiz x1 e %4.2f\n",x1); // Formato printf(<cadeia de caracteres de controle>,<lista de argumentos>);
+		printf("A raiz x2 e %4.2f\n",x2); // Especifica o tamanho do campo e a precisão
+	}
+	else if (delta==0) { // Raizes reais e iguais
+		printf("Raizes reais e iguais!\n");
+		printf("As raizes x1 e x2 sao %4.2f\n",-b/(2*a)); 
+	}
+		 else {
+			// Raizes complexas 
+			printf("Raizes complexas!\n");
+			printf("A raiz x1 e %4.2f + j%4.2f\n",-b/(2*a),sqrt(-delta)/(2*a)); // O C nao opera diretamente com complexos
+			printf("A raiz x2 e %4.2f - j%4.2f\n",-b/(2*a),sqrt(-delta)/(2*a)); 
+		 }
+	
 }
