@@ -11,8 +11,8 @@
 #include <stdio.h>
 
 main() {
-	float ap1, ap2, ac; // Declara variáveis de ponto flutuante
+	float ap1=8.5, ap2=7.3, ac=5; // Declara variáveis de ponto flutuante
 	float media;
-	media = 0.4*(8.5+7.3)+0.2*5; //Atribui o resultado da expressao para media
-	printf("%f",media); // Formato printf(<cadeia de caracteres de controle>,<lista de argumentos>);
+	media = 0.4*(ap1+ap2)+0.2*ac; //Atribui o resultado da expressao para media
+	printf("%4.2f",media); // Formato printf(<cadeia de caracteres de controle>,<lista de argumentos>);
 }
