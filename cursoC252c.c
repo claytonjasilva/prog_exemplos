@@ -11,6 +11,6 @@
 #include <stdio.h>
 
 main() {
-	char meu_nome[20]="clayton j a silva"; // Declara e inicializa a string
-	printf("Meu nome e %s",meu_nome);
+	char meu_nome[20]="clayton j a silva"; // Declara e inicializa a string - entre aspas duplas
+	printf("Meu nome e %s",meu_nome); // Observe o especificador de tipo %s
 }
