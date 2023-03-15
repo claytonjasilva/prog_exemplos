@@ -11,7 +11,11 @@
 #include <stdio.h>
 
 main() {
-	int resultado, x=7; // Declara a variável ponteiro
-	resultado = (2 > x) && (3 + 4 == 6);
+	int resultado, x=7; // Declara e inicializa a variáveis
+	resultado = (2 > x) && (3 + 4 == 6); // Operador lógico de conjunção
+					     // 0 && 0 = 0
+					     // 0 && 1 = 0
+					     // 1 && 0 = 0
+					     // 1 && 1 = 1
 	printf("O resultado da expressao logica e %i",resultado); 
 }
