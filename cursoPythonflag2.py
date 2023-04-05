@@ -2,18 +2,18 @@
 # Escrever o nome do animal mais velho.
 # Interromper a leitura se o usuário digitar idade igual a 0.
 
-cont = 0 # Inicializa contador
+cont = 0 # Inicializa contador dos loops
 maior_idade = 0 # Inicializa a variável que armazena a maior idade
 idade = int(input('Digite a idade do animal: '))
 while cont<50:
     if idade == 0:
-      break
+      break # Sai do loop se o flag de idade igual a 0 ocorrer
     else:
       nome = input('Digite o nome do animal: ')
-      if idade > maior_idade:
+      if idade > maior_idade: # troca
         maior_idade = idade
         maior_nome = nome
-      cont += 1
+      cont += 1 # Incrementa o contador de loops para idades válidas
       idade = int(input('Digite a idade do animal: '))
 
 if cont == 0:
