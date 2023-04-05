@@ -2,9 +2,9 @@
 # Escrever o nome do animal mais velho.
 # Interromper a leitura quando o usuário digitar idade igual a 0.
 
-maior_idade = 0
+maior_idade = 0 # Inicializa a vaariável que armazena a maior idade
 idade = int(input('Digite a idade do animal: '))
-while idade != 0:
+while idade != 0: # A idade é o flag para sair do loop
     nome = input('Digite o nome do animal: ')
     if idade > maior_idade: # troca
         maior_idade = idade
