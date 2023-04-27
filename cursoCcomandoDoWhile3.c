@@ -9,7 +9,8 @@ Se o usuário digitar uma opção inválida o programa deve permanecer solicitan
 float opcao1(N){
     float S = 0, termo;
     for (int i=0;i<N;i++){
-        termo = 1/(i + 3);
+        termo = 1.0/(i + 3.0);
+        printf("\n%f",termo);
         S += termo;
     }
     return S;
@@ -19,7 +20,7 @@ float opcao1(N){
 float opcao2(N){
     float S = 0, termo;
     for (int i=0;i<N;i++){
-        termo = (2 *i)/(i  + 1);
+        termo = (2.0 * i)/(i + 1.0);
         S += termo;
     }
     return S;
@@ -59,7 +60,6 @@ int main () {
                 break;    
         }
     } while (flag);
-    printf("O resultado da operacao eh %.5f",resultado);
+    printf("O resultado da operacao eh %f",resultado);
     return 0;
 }
-
