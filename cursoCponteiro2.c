@@ -5,13 +5,13 @@ Escrever cada um dos números lidos seguidos da média. */
 #include <stdlib.h>
 
 int main () {
-    float media;
+    float media = 0;
     float *p;
     p = (float *) malloc(10*sizeof(float)); // Aloca 10 dinamicamente endereços de float 
     for (int i = 0;i<10;i++){
         printf("\nnumero: ");
         scanf("%f",p);
-        media = *p;
+        media += *p;
         p++;
     }
     media = media / 10;
@@ -23,4 +23,3 @@ int main () {
 
     return 0;
 }
-
