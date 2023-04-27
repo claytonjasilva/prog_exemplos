@@ -10,7 +10,6 @@ float opcao1(N){
     float S = 0, termo;
     for (int i=0;i<N;i++){
         termo = 1.0/(i + 3.0);
-        printf("\n%f",termo);
         S += termo;
     }
     return S;
