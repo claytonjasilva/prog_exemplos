@@ -1,9 +1,6 @@
-/*Criar um vetor que armazene os seguintes nomes: 
-"ana", "joao", "pedro", "carlos", "jose", "joaquim", "zenildo".  
-Com o vetor criado, o usuario poderá digitar um nome, 
-se o nome pertencer ao conjunto, o programa deverá responder "NOME ENCONTRADO!".  
-Se o nome digitado pelo usuário não pertencer ao conjunto, 
-o programa deverá responder "NOME NAO PERTENCE A RELACAO!".*/
+/*Criar um vetor para armazenar os nomes de alunos de uma turma de aula.   
+O usuário deverá digitar quantos alunos a turma possui, antes de informar os nomes do aluno da turma.
+Ao final, o programa deve escrever o primeiro nome digitado pelo usuário.*/
 
 #include <stdio.h>
 #include <stdlib.h>
