@@ -13,7 +13,7 @@ o programa deverá responder "NOME NAO PERTENCE A RELACAO!".*/
 int main () {
     char *p[DIM] = {"ana", "joao", "pedro", "carlos", "jose", "joaquim", "zenildo"}; // Declara vetor de ponteiro
     char nome[10];
-      int i;
+    int i;
 
 
     printf("Digite o nome: ");
