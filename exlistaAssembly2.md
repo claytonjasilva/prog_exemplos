@@ -42,12 +42,13 @@ A solução do problema pode ser generalizada mais facilmente para, por exemplo,
 | 0x002 | stor m(x) 0x10D | ; Carrega o conteúdo do acumulador para o endereço 0x10D (armazena o último endereço dos 10 dados) |
 | 0x003 | load m(x) 0x100  | ; Carrega o conteúdo da memória no acumulador |
 | 0x003 | stor m(x) 0x10A  | ; Carrega o conteúdo do acumulador na memória |
-| 0x004 | loop: add m(x) 0x101  | ; Realiza a operação ACC <- ACC + conteúdo da memória |
-| 0x004 | stor m(x) 0x10A  | ; Carrega o conteúdo do acumulador no endereço de memória - 0x10A armazena a soma |
+| 0x004 | loop: load m(x) 0x10A  | ; Carrega o conteúdo da memória no acumulador |
+| 0x004 | add m(x) 0x101  | ; Realiza a operação ACC <- ACC + conteúdo da memória |
+| 0x005 | stor m(x) 0x10A  | ; Carrega o conteúdo do acumulador no endereço de memória - 0x10A armazena a soma |
 | 0x005 | load m(x) 0x10C  | ; Carrega o conteúdo do endereço atual do dado no acumulador |
-| 0x005 | add m(x) 0x10B  | ; Realiza a operação ACC <- ACC + conteúdo da memória - **incrementa o acumulador** |
+| 0x006 | add m(x) 0x10B  | ; Realiza a operação ACC <- ACC + conteúdo da memória - **incrementa o acumulador** |
 | 0x006 | stor m(x) 0x10C  | ; Carrega o conteúdo do acumulador no endereço de memória - **atualiza o endereço do próximo dado** |
-| 0x006 | stor m(x,8:19) 0x004  | ; Altera o operando da instrução do endereço 0x004 para o endereço atual do dado |
+| 0x007 | stor m(x,28:39) 0x004  | ; Altera o operando da instrução do endereço 0x004 para o valor do acumulador |
 | 0x007 | load m(x) 0x10D  | ; Carrega o conteúdo da memória no acumulador |
-| 0x007 | sub m(x) 0x10C  | ; Realiza a operação ACC <- ACC - conteúdo da memória |
+| 0x008 | sub m(x) 0x10C  | ; Realiza a operação ACC <- ACC - conteúdo da memória |
 | 0x008 | jump +m(x,0;19) loop | ; Desvia para o endereço especificado |
