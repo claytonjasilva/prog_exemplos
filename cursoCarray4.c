@@ -12,7 +12,7 @@ int main () {
     // Entrada do numero de alunos da turma
     printf("Digite o número de alunos da turma: ");
     scanf("%d",&N);
-    ap = (char **) malloc(N*sizeof(char *)); // Aloca dinamicamente N endereços de char[10] 
+    ap = (char **) malloc(N*sizeof(char *)); // Aloca dinamicamente N endereços de ponteiro de char 
 
     for (int i = 0;i<N;i++) {
         scanf("%s",ap);
