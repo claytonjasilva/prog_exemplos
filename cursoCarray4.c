@@ -13,6 +13,8 @@ int main () {
     printf("Digite o número de alunos da turma: ");
     scanf("%d",&N);
     ap = (char **) malloc(N*sizeof(char *)); // Aloca dinamicamente N endereços de ponteiro de char 
+                                             // Cada endereço de ponteiro de char ocupa 8 bytes em um sistema operacional de 64 bits 
+                                             // e 4 bytes em um sistema operacional de 32 bits. 
 
     for (int i = 0;i<N;i++) {
         scanf("%s",ap);
