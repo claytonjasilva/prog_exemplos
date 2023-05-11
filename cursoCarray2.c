@@ -10,7 +10,7 @@ o programa deverá responder "NOME NAO PERTENCE A RELACAO!".*/
 #define DIM 7
 
 int main () {
-    char nome[10][DIM]={"ana", "joao", "pedro", "carlos", "jose", "joaquim", "zenildo"}; // Inicializa o vetor de strings
+    char nome[DIM][10]={"ana", "joao", "pedro", "carlos", "jose", "joaquim", "zenildo"}; // Inicializa o vetor de strings
     char nome_digitado[10]; // Declara a string a pesquisar
     int i;
    
