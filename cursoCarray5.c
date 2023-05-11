@@ -7,13 +7,13 @@ Escrever a média das idades.  */
 
 int main () {
     int N;
-    int *idade; // Declara um ponteiro de ponteiro de char
+    int *idade; // Declara um ponteiro de inteiros
     float media = 0;
     
     // Entrada do numero de alunos da turma
     printf("Digite o número de alunos da turma: ");
     scanf("%d",&N);
-    idade = (int *) malloc(N*sizeof(int)); // Aloca dinamicamente N endereços de char[10] 
+    idade = (int *) malloc(N*sizeof(int)); // Aloca dinamicamente N endereços de inteiros 
 
     for (int i = 0;i<N;i++) {
         scanf("%i",idade);
