@@ -176,10 +176,5 @@ void loop() {
         lcd.print("teclas * ou #");
     }
   }
-
-//  if (Serial.available()) {
-//           n1 = Serial.read();
-//           Serial.println(n1,DEC);
-//        }
   
 }
