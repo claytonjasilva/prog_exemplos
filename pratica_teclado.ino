@@ -8,12 +8,18 @@
 *******************************************************************************/
 
 #include <Keypad.h> // Biblioteca do codigo
+#include <LiquidCrystal.h>
+
+// inicializa a biblioteca
+// com os números dos pinos do arduíno
+const int rs = 10, en = 8, d4 = 2, d5 = 3, d6 = 4, d7 = 5;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+
+
 
 const byte LINHAS = 4; // Linhas do teclado
 const byte COLUNAS = 4; // Colunas do teclado
-const byte LED1 = 13; // LEDs para teste
-const byte LED2 = 12; 
-const byte LED3 = 7;
 
 const char TECLAS_MATRIZ[LINHAS][COLUNAS] = { // Matriz de caracteres (mapeamento do teclado)
   {'1', '2', '3', 'A'},
@@ -22,113 +28,158 @@ const char TECLAS_MATRIZ[LINHAS][COLUNAS] = { // Matriz de caracteres (mapeament
   {'*', '0', '#', 'D'}
 };
 
-const byte PINOS_LINHAS[LINHAS] = {6, 5, 4, 3}; // Pinos de conexao com as linhas do teclado
-const byte PINOS_COLUNAS[COLUNAS] = {8, 9, 10, 11}; // Pinos de conexao com as colunas do teclado
+const byte PINOS_LINHAS[LINHAS] = {22, 24, 26, 28}; // Pinos de conexao com as linhas do teclado
+const byte PINOS_COLUNAS[COLUNAS] = {30, 32, 34, 36}; // Pinos de conexao com as colunas do teclado
 
 Keypad teclado_personalizado = Keypad(makeKeymap(TECLAS_MATRIZ), PINOS_LINHAS, PINOS_COLUNAS, LINHAS, COLUNAS); // Inicia teclado
 
-int n1;
-
 int funcao1(void) {
-  return 30;
+  return 1;
 }
 
 int funcao2(void) {
-  return 2*30;
+  return 2;
 }
 
 int funcao3(void) {
-  return 3*30;
+  return 3;
 }
 
-int funcao4(void) { // Pisca LED 1 durante cerca de 10 segundos 
-  for (int j=0;j<50;j++){
-    digitalWrite(LED1,HIGH);
-    delay(200);
-    digitalWrite(LED1,LOW);
-    delay(200);
-  }
-  return 1;
+int funcao4(void) {
+  return 4;
 }
 
-int funcao5(void) { // Pisca LED 2 durante cerca de 6 segundos 
-  for (int j=0;j<30;j++){
-    digitalWrite(LED2,HIGH);
-    delay(200);
-    digitalWrite(LED2,LOW);
-    delay(200);
-  }
-  return 1;
+int funcao5(void) {
+  return 5;
 }
 
-int funcao6(void) { // Pisca LED 3 durante cerca de 4 segundos 
-  for (int j=0;j<20;j++){
-    digitalWrite(LED3,HIGH);
-    delay(200);
-    digitalWrite(LED3,LOW);
-    delay(200);
-  }
-  return 1;
+int funcao6(void) {
+  return 6;
 }
 
-int funcao7(int n1, int n2) { // Pisca LED 3 durante cerca de 4 segundos 
-  return n1 + n2;
+int funcao7(void) {
+  return 7;
 }
 
-int funcaoqq(void){
+int funcao8(void) {
+  return 8;
+}
+
+int funcao9(void) {
+  return 9;
+}
+
+int funcaoA(void) {
+  return 10;
+}
+
+int funcaoB(void) {
+  return 11;
+}
+
+int funcaoC(void) {
+  return 12;
+}
+
+int funcaoD(void) {
+  return 13;
+}
+
+int funcaoX(void) {
   return 0;
 }
 
+
 void setup() {
+   // configura o número de colunas e linhas do lcd:
+  lcd.begin(16, 2);
+  lcd.print("Uso do lcd1602");  
   Serial.begin(9600); // Inicia porta serial
-  pinMode(LED1,OUTPUT);
-  pinMode(LED2,OUTPUT);
-  pinMode(LED3,OUTPUT);
 }
 
 void loop() {
   char leitura_teclas = teclado_personalizado.getKey(); // Atribui a variavel a leitura do teclado
-  int n2 = 0; // Variáveis para a função 7
+  lcd.setCursor(0, 1);
 
+  
   if (leitura_teclas) { // Se alguma tecla foi pressionada
     Serial.println(leitura_teclas); // Imprime a tecla pressionada na porta serial
     switch (leitura_teclas) {
       case '1':
-        Serial.println(funcao1());
+        Serial.println("tecla 1");
+        lcd.clear();
+        lcd.print("tecla 1");
         break;
       case '2':
-        Serial.println(funcao2());
+        Serial.println("tecla 2");
+        lcd.clear();
+        lcd.print("tecla 2");
         break;
       case '3':
-        Serial.println(funcao3());
+        Serial.println("tecla 3");
+        lcd.clear();
+        lcd.print("tecla 3");
         break;
       case '4':
-        Serial.println("Pisca LED1");
-        funcao4();
+        Serial.println("tecla 4");
+        lcd.clear();
+        lcd.print("tecla 4");        
         break;
       case '5':
-        Serial.println("Pisca LED2");
-        funcao5();
+        Serial.println("tecla 5");
+        lcd.clear();
+        lcd.print("tecla 5");
         break;
       case '6':
-        Serial.println("Pisca LED3");
-        funcao6();
+        Serial.println("tecla 6");
+        lcd.clear();
+        lcd.print("tecla 6");
         break;
       case '7':
-        Serial.println("Le dois numeros inteiros e apresenta a soma");
-        if (Serial.available()) {
-           n1 = Serial.read();
-        }
+        Serial.println("tecla 7");
+        lcd.clear();
+        lcd.print("tecla 7");
+        break;
+      case '8':
+        Serial.println("tecla 8");
+        lcd.clear();
+        lcd.print("tecla 8");
+        break;
+      case '9':
+        Serial.println("tecla 9");
+        lcd.clear();
+        lcd.print("tecla 9");
+        break;
+      case 'A':
+        Serial.println("tecla A");
+        lcd.clear();
+        lcd.print("tecla A");
+        break;
+      case 'B':
+        Serial.println("tecla B");
+        lcd.clear();
+        lcd.print("tecla B");
+        break;
+      case 'C':
+        Serial.println("tecla C");
+        lcd.clear();
+        lcd.print("tecla C");
+        break;
+      case 'D':
+        Serial.println("tecla D");
+        lcd.clear();
+        lcd.print("tecla D");
         break;
       default:
-        Serial.println(funcaoqq());
+        Serial.println("tecla X");
+        lcd.clear();
+        lcd.print("teclas * ou #");
     }
   }
 
-  //if (n1 != 0) Serial.println(funcao7(n1,n2), DEC);
-  if (Serial.available()) {
-           n1 = Serial.read();
-           Serial.println(n1,DEC);
-        }
+//  if (Serial.available()) {
+//           n1 = Serial.read();
+//           Serial.println(n1,DEC);
+//        }
   
 }
