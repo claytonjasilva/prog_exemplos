@@ -2,9 +2,9 @@
  ============================================================================
  Nome        : Exemplos1.c
  Autor      : Prof Clayton J A Silva
- Versao     :
+ Versão     :
  Copyright   : Curso de C Ibmec
- Descricao : 
+ Descrição : 
  Escrever um programa para atribuir as notas 8,5 (oito vírgula cinco), 7,3 (sete vírgula três) e 5 (cinco) respectivamente para ap1, ap2 e ac de um aluno.
  Calcular e escrever a média.
  ============================================================================
@@ -25,7 +25,7 @@ int main() {
     printf("Nota AP1: %.1f\n", ap1); // Imprime a nota AP1 com uma casa decimal
     printf("Nota AP2: %.1f\n", ap2); // Imprime a nota AP2 com uma casa decimal
     printf("Nota AC: %.1f\n", ac);   // Imprime a nota AC com uma casa decimal
-    printf("Média: %.2f\n", media);  // Imprime a média com duas casas decimais
+    printf("Media: %.2f\n", media);  // Imprime a média com duas casas decimais
     
     return 0; // Retorna 0 indicando que o programa terminou sua execução com sucesso
 }
