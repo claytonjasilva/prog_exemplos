@@ -1,3 +1,10 @@
+/*
+Prática 2 - Conhecendo o Arduíno 2560
+Circuito utilizando a placa do Arduíno 2560 para acender um de três LEDs conectados a três pinos de saída do Arduíno.
+Prof. Clayton J A Silva
+Disciplina Arquitetura de Computadores
+*/
+
 // Define nomes para os pinos usados como saída
 #define LED1 2
 #define LED2 3

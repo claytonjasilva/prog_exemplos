@@ -1,3 +1,11 @@
+/*
+Prática 9 - Dispositivos de entrada/saída
+Circuito utilizando a placa do Arduíno 2560 e entrada com sensor ultrassônico.
+O sistema aguarda no monitor serial um comando (caractere 'A') através do qual calcula e gera a distância em centímetros do objeto.
+Prof. Clayton J A Silva
+Disciplina Arquitetura de Computadores
+*/
+
 //Este código captura e armazena as distâncias detectadas por um sensor ultrassônico
 #define VEL_SOM 340 // definição da velocidade do som, em metros por seg
 

@@ -1,3 +1,13 @@
+/*
+Prática 5 - Conhecendo o Arduíno 2560
+Circuito utilizando a placa do Arduíno 2560 utilizando três chaves.
+As chaves indicam entradas binárias: 000, 0001, 010, ..., 111. A saída de cada chave conecta em uma entrada do Arduíno (2, 3, 4).
+Conforme a palavra do código de entrada, o programa realiza uma função específica.
+Prof. Clayton J A Silva
+Disciplina Arquitetura de Computadores
+*/
+
+
 #define I0 2 // define a macro relativa a entrada (pino) 2 - em cada pino um LED
 #define I1 3
 #define I2 4
