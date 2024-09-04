@@ -22,7 +22,7 @@ int main() {
             printf("O numero eh %d\n",numero);
         else
             printf("numero impar\n");
-    } while (1);
+    } while (1); // Estrutura do...while de repetição - será discutida na seção seguinte
 
     return 0;
 }
